@@ -1,0 +1,222 @@
+.center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#0fbcf9,#8fe1ff,#e7f4f8);
+}
+
+.card{
+    height: 550px;
+    width: 350px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background-image: url("https://i.pinimg.com/originals/84/55/bc/8455bc57cafc1049fc8eb6d40a240b0a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3rem;
+    box-shadow: 6px 14px 19px 2px rgba(0,0,0,0.89);
+    border: none;
+    animation-name: cards;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    cursor: pointer;
+}
+
+.box{
+    width: 100%;
+    padding: 40px;
+    height: 560px;
+    position: relative;
+}
+
+.location_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.icon{
+    font-size: 10rem;
+    color: cyan;
+}
+
+.desc{
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 6.5rem;
+    text-align: left;
+}
+
+.head{
+    display: block;
+}
+
+.dates{
+    font-size: 12px;
+}
+
+.temp_box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 3rem;
+}
+
+.temps{
+    flex: 0.5;
+}
+
+.temp-data{
+    font-size: 20px;
+    
+    margin-top: 15px;
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+
+.status{
+    flex: 0.5;
+    margin: 0px 20px;
+}
+
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humidity{
+    display: flex;
+    flex-direction: column;
+}
+
+.texts{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    height: 2px;
+}
+
+.location_box h5{
+    text-transform: capitalize;
+}
+
+.wicon{
+    color: yellow;
+}
+
+.temp{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgs{
+    margin: 0 5px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.icons_text{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+@keyframes cards {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+/* Places */
+.Inputcard{
+    display: flex;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+label{
+    font-size: larger;
+}
+
+input{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: 30vw;
+    box-shadow: 0px 0px 8px 2px dodgerblue;
+    background-color: azure;
+    color: #182C61;
+}
+
+input:focus{
+    border: none;
+}
+
+
+button[type=submit]{
+    background-color: dodgerblue;
+    color: wheat;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type=submit]:hover{
+    color: dodgerblue;
+    transition-duration: 450ms;
+    background-color: rgb(140, 193, 245);
+    box-shadow: 0px 0px 8px 2px dodgerblue;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .Inputcard{
+        margin: 50px 0;
+        
+    }
+    .card{
+        margin-top: 150px;
+    }
+
+    .center{
+        overflow-y: auto;
+        padding: 50px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        width: 300px;
+    }
+    label{
+        color: dodgerblue;
+    }
+}
